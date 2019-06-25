@@ -1,0 +1,131 @@
+.map {
+    overflow: hidden;
+    justify-content: center;
+}
+.map__image {
+    position: relative;
+}
+.map__list .logo {
+    float: left;
+    padding: 5px;
+}
+.map__list .logo img {
+    /*width: 50%;*/
+}
+.map__list .text {
+    float: left;
+    padding: 5px;
+    font-size: 1vw;
+    font-family: Arial;
+}
+.map__list .title {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.map__list .popup {
+    width: 20%;
+    border: 2px solid #a22b24;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+    transition: opacity 600ms, visibility 600ms;
+
+    background-color: white;
+    border-radius: 5px;
+}
+.map__list .popup:after {
+    position: absolute;
+    left: 30%;
+    bottom: -14px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-top: 15px solid white;
+    border-right: 10px solid transparent;
+    content: " ";
+}
+.map__list .popup:before {
+    position: absolute;
+    left: 30%;
+    bottom: -17px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-top: 15px solid #a22b24;
+    border-right: 10px solid transparent;
+    content: " ";
+}
+
+.map__list #list-annecy {
+    top: 35%;
+    right: 10%;
+}
+.map__list #list-lyon {
+     top: 45%;
+     right: 20%;
+}
+.map__list #list-toulouse {
+    bottom: 20%;
+    left: 50%;
+}
+.map__list #list-clichy {
+    top: 14%;
+    left: 58%;
+}
+.map__list #list-montpellier {
+    bottom: 25%;
+    left: 65%;
+}
+.map__list #list-lyon.is-active,
+.map__list #list-toulouse.is-active,
+.map__list #list-clichy.is-active,
+.map__list #list-montpellier.is-active,
+.map__list #list-annecy.is-active {
+    display: flex;
+    visibility: visible;
+    opacity: 1
+}
+.map__list #list-annecy:hover,
+.map__list #list-toulouse:hover,
+.map__list #list-clichy:hover,
+.map__list #list-montpellier:hover,
+.map__list #list-lyon:hover {
+    display: flex;
+    cursor: default;
+    visibility: visible;
+    opacity: 1
+}
+
+/***************************************	MEDIA
+****************************************/
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .map__list .logo img {
+        width: 20px;
+    }
+}
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+    .map__list .popup.annecy-popup:after,
+    .map__list .popup.annecy-popup:before {
+        left: 60%;
+    }
+}
+
